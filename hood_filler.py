@@ -52,7 +52,6 @@ def minimum_weigths_compute(present_weights, hood_capacity):
                 #considerint minimum of {previous sequence weights count, new sequence weights count} of j
                 table[i][j] = min(table[i - 1][j],
                                 table[i][j - present_weights[i - 1]] + 1)
-        
     
     row_index = total_weights
         
@@ -72,7 +71,7 @@ def minimum_weigths_compute(present_weights, hood_capacity):
 
 
 
-@app.route('/hoodfiller', methods=['GET', 'POST'])
+@app.route('/hoodfiller', methods=['POST'])
 def compute_weigths():
     
     try:
