@@ -71,6 +71,7 @@ def minimum_weigths_compute(present_weights, hood_capacity):
 
 
 
+#defining rest api which takes incoming request and return the final response
 @app.route('/hoodfiller', methods=['POST'])
 def compute_weigths():
     
