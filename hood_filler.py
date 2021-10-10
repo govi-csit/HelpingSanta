@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Oct 10 18:59:57 2021
+Created on Sun Oct 10 2021
 
 @author: Govi
 """
@@ -74,13 +74,20 @@ def minimum_weigths_compute(present_weights, hood_capacity):
 
 @app.route('/hoodfiller', methods=['GET', 'POST'])
 def compute_weigths():
-
-    content = request.json
-    hood_capacity = content['hood_capacity']
-    present_weights = content['present_weights']
     
-    print('hood_capacity : ', hood_capacity)
-    print('present_weights : ', hood_capacity)
+    try:
+        content = request.json
+        hood_capacity = content['hood_capacity']
+        present_weights = content['present_weights']
+        
+        print('hood_capacity : ', hood_capacity)
+        print('present_weights : ', hood_capacity)
+    
+    except Exception as e:
+        print('Exception raised: ', e)
+        return jsonify({"Exception raised" : str(e),
+                        "message" : "please check the JSON request and try again",                        
+                        })
     
     #calling the core logic function for computing the weights
     items = minimum_weigths_compute(present_weights, hood_capacity)
