@@ -1,6 +1,7 @@
 # HelpingSanta
+Implemented a Flask based API which takes hood capacity and available weights as request and returns the minimum number of weights to fill hood capacity
 
-Steps to execute the code
+**Steps to run the APP**
   1. install python
   2. install <b>flask</b> package using the command <b>pip intall flask</b> in command prompt
   3. open command prompt and go to the directory where <b>hood_filler.py</b> resides
@@ -18,4 +19,4 @@ Steps to execute the code
     ]
 }
  
- Note : Please refer the attached screenshot : <b>reques_and_response.PNG</b> contains request and response from postman
+ Note : Here is the attached screenshot : <b>reques_and_response.PNG</b> contains request and response from postman
