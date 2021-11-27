@@ -1,5 +1,5 @@
 # HelpingSanta
-Implemented a Flask based API which takes hood capacity and available weights as request and returns the minimum number of weights to fill hood capacity
+Implemented a **Flask based API** which takes hood capacity and available weights as request and returns the minimum number of weights to fill hood capacity
 
 **Steps to run the APP**
   1. install python
